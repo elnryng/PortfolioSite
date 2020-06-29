@@ -1,0 +1,55 @@
+/* =============
+    Base
+============= */
+.hide-for-mobile-and-tab{
+    display: none;
+
+    @include lg{
+        display: block !important;
+    }
+
+}
+
+.hide-for-mobile{
+    display: none;
+
+    @include md{
+        display: block !important;
+    }
+
+    }
+
+.show-for-tablet{
+    display: none;
+
+    @include md{
+        display: block !important;
+    }
+
+    @include lg{
+        display: none !important;
+    }
+
+    @include xl{
+        display: none !important;
+    }
+}
+
+.section-padding{
+    padding: 60px 20px;
+
+    @include md{
+        padding: 100px 0px;
+    }
+
+    @include lg{
+        padding: 160px 60px;
+    }
+
+    @include xl{
+        padding: 180px 70px;   
+    }
+}
+
+
+
