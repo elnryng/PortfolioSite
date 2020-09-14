@@ -1,0 +1,77 @@
+#branding{
+    display: flex;
+    flex-direction: column;
+
+    @include md{
+        display: grid;
+        grid-template-columns: 20px auto 40%;
+        grid-template-areas: ". content .";
+    }
+
+    @include lg{
+        grid-template-columns: 75% auto;
+        grid-template-areas: "content .";
+
+    }
+
+
+>div{
+    
+    @include md{
+        grid-area: content;
+    }
+
+    
+
+
+    >div{
+        border-color: $yellow;
+
+        a:link,
+        a:visited {
+                color: $yellow;
+                text-decoration: none;
+                transition: 0.25s;
+                
+            }
+
+            a:hover,
+            a:active {
+            .image-color-hover{
+                opacity: 0.7;
+                background: $yellow !important;
+            }
+                // background-color: $yellow;
+                // opacity: 0.8;
+                
+                
+                
+            }
+
+            // a:hover:after{
+            //     color: $yellow;
+                
+            // }
+
+        @include lg{
+            height: 35vh;
+        }
+
+        @include xl{
+            height: 50vh;
+        }
+        
+        #image{
+            display: block;
+            color: none;
+            background-image: url("../img/home/branding.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width:100%;
+            
+        }
+    }
+}
+
+}

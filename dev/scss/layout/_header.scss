@@ -1,3 +1,18 @@
 /* =============
     Header
 ============= */
+#nav{
+    margin-right:0px;
+    padding-right: 0px;
+    #tabs{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+        >li{
+            padding-right: 5%;
+        }
+        
+    }
+    
+}

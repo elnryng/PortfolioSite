@@ -1,0 +1,35 @@
+#pub{
+    display: flex;
+    flex-direction: column;
+    
+    @include md{
+        display: grid;
+        grid-template-columns: 40% auto 20px;
+        grid-template-areas: ". content .";
+    }
+
+    @include lg{
+        grid-template-columns: 20% auto 20%;
+        grid-template-areas: " . content ."
+    }
+
+>div{
+
+    grid-area: content;
+
+    >div{
+        border-color: $blue;
+        #image{
+            display: block;
+            background-image: url("../img/home/pub.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width:100%;
+            
+        }
+    }
+
+}
+}

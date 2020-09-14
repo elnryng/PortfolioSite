@@ -1,0 +1,91 @@
+#posters{
+    display: grid;
+    grid-template-columns: 1fr 5% 1fr;
+    grid-template-areas: "type . poster"
+    "text text text";
+    grid-column-gap: 20px;
+
+    @include md{
+        grid-template-columns: 20px auto 20% 20px;
+        grid-template-areas: 
+        ". words bembo ."
+        ".  spread . .";
+        
+    }
+
+    @include lg{
+        grid-template-columns: 20% 5% auto;
+        grid-template-areas:
+        "bembo . ."
+        "bembo . spread"
+        "words words spread"
+        ". . spread";
+    }
+
+    .image-holder-right{
+        grid-area: poster;
+        @include md{
+            grid-area: bembo;
+        }
+
+        @include lg{
+            height: 15vh;
+        }
+        
+        height: 20vh;
+    
+        
+    #image-right{
+        display: block;
+        background-image: url("../img/home/poster.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width:100%;
+    }
+    }
+
+    .image-holder-left{
+        grid-area: type;
+        @include md{
+            grid-area: spread;
+        }
+
+        @include lg{
+            height: 25vh;
+        }
+        
+        border-color: $yellow;
+        margin-right: 20px;
+        height: 20vh;
+        #image-left{
+            
+            display: block;
+            background-image: url("../img/home/type.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+                width:100%;
+        }
+    }
+   
+    >h2{
+        grid-area: text;
+        @include md{
+            grid-area: words;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-bottom: 8%;
+        }
+
+        @include lg{
+            text-align: right;
+            padding-bottom: 0px;
+            padding-top: 15%;
+        }
+        
+    }
+}

@@ -1,0 +1,25 @@
+#intro{
+    // display: flex;
+    
+    >h1{
+        width: 63%;
+        >span{
+            color: $red;
+        }
+    }
+
+    :last-child{
+        padding-top: 24px;
+        text-align: right;
+        width: 100%;
+
+        @include lg{
+            padding-top: 33px;
+            text-align: left;
+        }
+
+        @include xl{
+            padding-top: 60px;
+        }
+    }
+}

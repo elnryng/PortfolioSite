@@ -1,6 +1,15 @@
 /* =============
     Base
 ============= */
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
 .hide-for-mobile-and-tab{
     display: none;
 
@@ -36,20 +45,125 @@
 }
 
 .section-padding{
-    padding: 60px 20px;
+    padding: 0px 20px 60px;
+    margin: 0px 10px;
+    // display: grid;
+    // grid-template-columns: 10px auto 10px;
+    // grid-template-areas: ". content .";
 
     @include md{
-        padding: 100px 0px;
+        padding: 0px 20px 100px;
     }
 
     @include lg{
-        padding: 160px 60px;
+        padding: 0px 60px 130px;
     }
 
-    @include xl{
-        padding: 180px 70px;   
+    @include xl{ 
+        padding: 0px 70px 180px;
     }
 }
 
+.image-holder-right{
+    border: 7px solid $red;
+    display: inline-block;
+    vertical-align: top;
+    height: 25vh;
+    width: 100%;
+    margin-bottom: 20px;
 
+    @include md{
+        height: 30vh;
+        // width: 70%;
+    }
+
+    @include lg{
+        height: 25vh;
+    }
+
+    @include xl{
+        border: 7px solid $red;
+        height: 50vh;
+        // width: 35%;
+    }
+    
+}
+
+.image-holder-left{
+    border: 7px solid $red;
+    display: inline-block;
+    vertical-align: top;
+    height: 25vh;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include md{
+        height: 30vh;
+        // width: 70%;
+    }
+
+    @include lg{
+        height: 25vh;
+    }
+
+    @include xl{
+        border: 7px solid $red;
+        height: 50vh;
+        // width: 35%;
+    }
+    
+}
+
+.image-holder-right a{
+position: relative;
+z-index: 100;
+right: 18px;
+bottom: 18px;
+
+
+@include xl{
+    right: 40px;
+    bottom: 40px;
+}
+
+}
+
+.image-holder-left a{
+    position: relative;
+    z-index: 100;
+    left: 18px;
+    bottom: 18px;
+    
+    
+    @include xl{
+        left: 40px;
+        bottom: 40px;
+    }
+    
+    }
+
+    // .container{
+    //     display: grid !important;
+    //     grid-template-columns: 10px auto 10px;
+    //     grid-template-areas: ". content .";
+    // }
+
+    .bio-text{
+        margin-bottom: 1em;
+      
+    }
+
+    .image-color-hover{
+        position: absolute;
+    display: block;
+    background: red;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    opacity: 0;
+    // -webkit-transition: .2s opacity cubic-bezier(.645,.045,.355,1),.2s background cubic-bezier(.645,.045,.355,1);
+    transition: .2s opacity cubic-bezier(.645,.045,.355,1),.2s background cubic-bezier(.645,.045,.355,1);
+    }
 

@@ -1,0 +1,23 @@
+#about{
+    grid-area: content;
+    // border: 10px solid #000;
+    @include md{
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-template-areas: "bio .";
+        
+    }
+    
+    #about-content{
+      
+        @include md{
+            // width: 35%;
+            grid-area: bio;
+        }
+        box-sizing: border-box;
+
+        @include lg{
+            padding-left: 20%;
+        }
+    }
+}

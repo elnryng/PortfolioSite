@@ -16,6 +16,7 @@ p{
 
 h1{
     font-family: 'Abril Fatface', cursive;
+    font-weight: normal;
     color: $blue;
     font-size: rem-calc(18);
 
@@ -43,6 +44,7 @@ h2{
     font-family: 'Abril Fatface', cursive;
     color: $navy;
     font-size: rem-calc(18);
+    font-weight: normal;
 
     @include lg{
         font-size: rem-calc(24);
@@ -56,12 +58,14 @@ h2{
     margin: 0px;
 }
 
-h3{
+li,h3{
     font-family:'Libre Franklin', sans-serif, ;
     font-weight: 700;
     font-size: rem-calc(16); 
 
     padding: 0px;
     margin: 0px;
+    
 }
+
 

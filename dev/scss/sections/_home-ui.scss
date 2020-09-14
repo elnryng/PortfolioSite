@@ -1,0 +1,44 @@
+#ui{
+    
+    display: flex;
+    flex-direction: column;
+
+    @include md{
+        display: grid;
+        grid-template-columns: 20% auto 20%;
+        grid-template-areas: ". content .";
+    }
+
+    @include lg{
+        grid-template-columns: 40% 60%;
+        grid-template-areas: ". content"
+    }
+
+    @include xl{
+        grid-template-columns: 50% 50%;
+        grid-template-areas: ". content"
+    }
+
+    >div{
+        @include md{
+            grid-area: content;
+            
+        }
+
+
+            .image{
+                display: block;
+                background-image: url("../img/home/UI.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+                width:100%;
+
+                
+            }
+        
+        
+    }
+
+
+}
